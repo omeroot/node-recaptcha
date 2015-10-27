@@ -4,4 +4,9 @@ reCAPTCHA is a free service that protects your website from spam and abuse. reCA
 
 reCAPTCHA offers more than just spam protection. Every time our CAPTCHAs are solved, that human effort helps digitize text, annotate images, and build machine learning datasets. This in turn helps preserve books, improve maps, and solve hard AI problems.
 
+##USE
 
+$npm install
+$node app.js
+
+open localhost:5050/form
