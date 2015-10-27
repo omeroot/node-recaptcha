@@ -7,6 +7,7 @@ reCAPTCHA offers more than just spam protection. Every time our CAPTCHAs are sol
 ##USE
 
 $npm install
+
 $node app.js
 
-open localhost:5050/form
+visit:  localhost:5050/form
