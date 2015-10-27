@@ -15,7 +15,8 @@ process.on('uncaughtException',function(err){
 });
 
 var opt = {
-  hostname: "https://www.google.com/recaptcha/api/siteverify"
+  hostname: "https://www.google.com/recaptcha/api/siteverify",
+  secret: "YOUR SECRET"
 }
 
 app.get('/form',function(req, res){
@@ -24,7 +25,7 @@ app.get('/form',function(req, res){
 
 app.post('/form',function(req, res){
   var cpt = req.body["g-recaptcha-response"];
-  request.post({url:opt.hostname,form:{"secret":"YOUR SECRET","response":cpt}},function(err,res,body){
+  request.post({url:opt.hostname,form:{"secret":opt.secret,"response":cpt}},function(err,res,body){
     if(err) throw err;
     console.log("success:",res.body);
   });
